@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Document   : pruebica
+    Created on : 18-nov-2016, 16:43:54
+    Author     : rpk19
+-->
+<jsp:root
+    xmlns:jsp="http://java.sun.com/JSP/Page"                        
+    xmlns:c="http://java.sun.com/jsp/jstl/core"           
+    version="2.1">
+    <jsp:directive.page contentType="text/html; charset=UTF-8" />
+    <jsp:directive.page isELIgnored="false" /> 
+    <jsp:output omit-xml-declaration="false"
+                doctype-root-element="html"   
+                doctype-public="-//W3C//DTD XHTML 1.1//EN" 
+                doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml11.dtd" />
+    <head></head>
+    <body>
+         <jsp:useBean id="eleccion" scope="request" class="es.albarregas.beans.EleccionBean"/>
+         <jsp:setProperty name ="eleccion" property="*"/>
+         <c:if test="${eleccion.edificio}">
+             <jsp:forward page="edificio.jspx"/>
+         </c:if>
+         <c:if test="${eleccion.contenido}">
+             <jsp:forward page="contenido.jspx"/>
+         </c:if>
+    </body>
+</jsp:root>

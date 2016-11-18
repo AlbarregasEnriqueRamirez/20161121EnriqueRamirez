@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Document   : contenido
+    Created on : 18-nov-2016, 19:05:21
+    Author     : rpk19
+-->
+<jsp:root
+    xmlns:jsp="http://java.sun.com/JSP/Page"                        
+    xmlns:c="http://java.sun.com/jsp/jstl/core"           
+    version="2.1">
+    <jsp:directive.page contentType="text/html; charset=UTF-8" />
+    <jsp:directive.page isELIgnored="false" /> 
+    <jsp:output omit-xml-declaration="false"
+                doctype-root-element="html"   
+                doctype-public="-//W3C//DTD XHTML 1.1//EN" 
+                doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml11.dtd" />
+    <head></head>
+    <body>
+        <label>Cubrir daños accidentales </label><input type="checkbox" value="1.25" name="chkdanios"/>
+        <br/>
+        <label> Cantidad que se quiere asegurar </label>
+        <select id="comboCantidad">
+            <option value="10000">10.000</option>
+            <option value="20000">20.000</option>
+            <option value="30000">30.000</option>
+            <option value="50000">50.000</option>
+            <option value="100000">100.000</option>
+        </select><br/>
+        <label> Franquicia </label><table>
+            <tr>
+                <td><input type="radio" value="0" name="rdbFr"/></td><td>Ninguna</td>
+            </tr>
+            <tr>
+                <td><input type="radio" value="500" name="rdbFr"/></td><td>500</td>
+            </tr>
+            <tr>
+                <td><input type="radio" value="1000" name="rdbFr"/></td><td>1.000</td>
+            </tr>
+        </table>
+        <input type="submit" value="Enviar" name="btnSendContenido"/>
+    </body>
+</jsp:root>
+
