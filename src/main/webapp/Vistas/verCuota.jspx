@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Document   : verCuota
+    Created on : 20-nov-2016, 11:18:09
+    Author     : rpk19
+-->
+ <jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"                        
+    xmlns:c="http://java.sun.com/jsp/jstl/core"           
+    version="2.1">
+    <jsp:directive.page contentType="text/html; charset=UTF-8" />
+    <jsp:directive.page isELIgnored="false" /> 
+    <jsp:output omit-xml-declaration="false"
+                doctype-root-element="html"   
+                doctype-public="-//W3C//DTD XHTML 1.1//EN" 
+                doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml11.dtd" />
+    <head>
+        
+    </head>
+    <body>
+        <c:if test="${edificio}">
+            
+            Tipo de edificio <c:out value="${requestScope.edificioB.tipoEdificio}"/>
+           Número de habitaciones <c:out value="${requestScope.edificioB.numHabitaciones}"/>
+           Año de construccion <c:out value="${requestScope.edificioB.anioConstruccion}"/>
+           Tipo de construccion <c:out value="${requestScope.edificioB.tipoConstruccion}"/>
+          PrecioEstimado <c:out value="${requestScope.edificioB.precioEstimado}"/>
+           
+        </c:if>
+        <c:if test="${contenido}">
+            <c:if test="${requestScope.contenidoB.daniosAccidentales}">
+                Daños accidentales Si
+            </c:if>
+              <c:if test="${!requestScope.contenidoB.daniosAccidentales}">
+                Daños accidentales No
+            </c:if> 
+                Cantidad asegurada <c:out value="${requestScope.contenidoB.cantidadAsegurada}"/>
+                  <c:if test="${!requestScope.contenidoB.franquicia !=1}">
+                Franquicia <c:out value="${requestScope.contenidoB.franquicia}"/>
+                  </c:if>
+                     <c:if test="${!requestScope.contenidoB.franquicia ==1}">
+                Franquicia No
+                  </c:if>
+        </c:if>
+    </body>
+</jsp:root>

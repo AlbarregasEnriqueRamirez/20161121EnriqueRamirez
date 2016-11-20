@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
-    Document   : pruebica
-    Created on : 18-nov-2016, 16:43:54
+    Document   : contenido
+    Created on : 20-nov-2016, 10:51:47
     Author     : rpk19
 -->
 <jsp:root
@@ -16,14 +16,10 @@
                 doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml11.dtd" />
     <head></head>
     <body>
-       
-         <jsp:useBean id="eleccion" scope="request" class="es.albarregas.beans.EleccionBean"/>
-         <jsp:setProperty name="eleccion" property="*"/>
-         <c:if test="${eleccion.edificio}">
-             <jsp:forward page ="../Vistas/edificio.jspx"/>
-         </c:if>
-          <c:if test="${eleccion.contenido}">
-             <jsp:forward page ="../Vistas/contenido.jspx"/>
-         </c:if>
+         <jsp:useBean id="contenidoB" scope="request" class="es.albarregas.beans.ContenidoBean"/>
+         <jsp:setProperty name ="edificioB" property="*"/>
+      
+          <jsp:forward page="../Vistas/VerCuota.jspx"/>
+          
     </body>
 </jsp:root>

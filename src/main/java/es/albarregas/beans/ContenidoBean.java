@@ -14,8 +14,8 @@ public class ContenidoBean {
     //este bean controlará los datos del segundo seguro
     
     private boolean daniosAccidentales;
-    private int cantidadAsegurada;
-    private int franquicia;
+    private float cantidadAsegurada;
+    private float franquicia;
 
     public boolean isDaniosAccidentales() {
         return daniosAccidentales;
@@ -25,19 +25,19 @@ public class ContenidoBean {
         this.daniosAccidentales = daniosAccidentales;
     }
 
-    public int getCantidadAsegurada() {
+    public float getCantidadAsegurada() {
         return cantidadAsegurada;
     }
 
-    public void setCantidadAsegurada(int cantidadAsegurada) {
+    public void setCantidadAsegurada(float cantidadAsegurada) {
         this.cantidadAsegurada = cantidadAsegurada;
     }
 
-    public int getFranquicia() {
+    public float getFranquicia() {
         return franquicia;
     }
 
-    public void setFranquicia(int franquicia) {
+    public void setFranquicia(float franquicia) {
         this.franquicia = franquicia;
     }
     

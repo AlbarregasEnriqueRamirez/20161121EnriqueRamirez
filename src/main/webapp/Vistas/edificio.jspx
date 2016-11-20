@@ -17,17 +17,18 @@
         
     </head>
     <body>
+        <form action ="../Controladores/edificio.jspx" method='post'>
         <label> Tipo de casa </label>
-        <select id="combocasa">
-            <option value="0.95">Piso</option>
-            <option value="1">Casa</option>
-            <option value="1.05">Adosado</option>
-            <option value="1.1">Dúplex</option>
-            <option value="1.2">Chalet</option>
+        <select id="tipoEdificio">
+            <option value="Piso">Piso</option>
+            <option value="Casa">Casa</option>
+            <option value="Adosado">Adosado</option>
+            <option value="Dúplex">Dúplex</option>
+            <option value="Chalet">Chalet</option>
         </select>
      <br/>
      <label> Número de habitaciones </label>
-     <select id="comboHab">
+     <select id="numHabitaciones">
          <option value="1"> 1</option>
          <option value="2"> 2</option>
          <option value="3"> 3</option>
@@ -36,7 +37,7 @@
      </select><br/>
      
      <label> Fecha aproximada de construccion </label>
-     <select id="comboFecha">
+     <select id="anioConstruccion">
          <option value="0.09">Antes de 1950</option>
          <option value="0.06">Entre 1950 y 1990</option>
          <option value="0.04">Entre 1991 y 2005</option>
@@ -47,14 +48,23 @@
      <label> Tipo de construccion</label>
      <table>
          <tr>
-             <td><input type="radio" name="casatipo" value="madera" checked="checked"/></td>
+             <td><input type="radio" name="tipoConstruccion" value="Madera" checked="checked"/></td>
              <td>Madera</td>
          </tr>
          <tr>
-             <td><input type="radio" name="casatipo" value="hormigon"/></td><td>Hormigón</td>
+             <td><input type="radio" name="tipoConstruccion" value="Hormigón"/></td><td>Hormigón</td>
          </tr>         
      </table><br/>
-         
+    
+     <label> Valor estimado en el mercado</label> 
+     <select id="precioEstimado">
+         <option value="25000"> Menor de 50.000</option>
+         <option value="50001"> Entre 50.001 y 80.000</option>
+         <option value ="80001"> Entre 80.001 y 100.000</option>
+         <option value="100001"> Entre 100.001 y 150.000</option>
+         <option value ="125000"> Superior a 150.000</option>
+     </select>
      <input type="submit" value="Enviar" name="btnSendEdificio"/>
+        </form>
     </body>
 </jsp:root>

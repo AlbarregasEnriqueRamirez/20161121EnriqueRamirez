@@ -16,10 +16,11 @@
                 doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml11.dtd" />
     <head></head>
     <body>
-        <label>Cubrir daños accidentales </label><input type="checkbox" value="1.25" name="chkdanios"/>
+        <form action="../Controladores/contenido.jspx" method='post'>
+        <label>Cubrir daños accidentales </label><input type="checkbox" name="daniosAccidentales"/>
         <br/>
         <label> Cantidad que se quiere asegurar </label>
-        <select id="comboCantidad">
+        <select id="cantidadAsegurada">
             <option value="10000">10.000</option>
             <option value="20000">20.000</option>
             <option value="30000">30.000</option>
@@ -28,16 +29,17 @@
         </select><br/>
         <label> Franquicia </label><table>
             <tr>
-                <td><input type="radio" value="0" name="rdbFr"/></td><td>Ninguna</td>
+                <td><input type="radio" value="1" name="franquicia"/></td><td>Ninguna</td>
             </tr>
             <tr>
-                <td><input type="radio" value="500" name="rdbFr"/></td><td>500</td>
+                <td><input type="radio" value="0.1" name="franquicia"/></td><td>500</td>
             </tr>
             <tr>
-                <td><input type="radio" value="1000" name="rdbFr"/></td><td>1.000</td>
+                <td><input type="radio" value="0.2" name="franquicia"/></td><td>1.000</td>
             </tr>
         </table>
         <input type="submit" value="Enviar" name="btnSendContenido"/>
+        </form>
     </body>
 </jsp:root>
 
