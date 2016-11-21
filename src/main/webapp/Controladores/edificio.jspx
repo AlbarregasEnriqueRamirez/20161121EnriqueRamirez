@@ -18,7 +18,8 @@
     <body>
          <jsp:useBean id="edificioB" scope="request" class="es.albarregas.beans.EdificioBean"/>
          <jsp:setProperty name ="edificioB" property="*"/>
-         <c:if test="${requestScope.eleccion.contenido}">
+         
+         <c:if test="${requestScope.contenido}">
              <jsp:forward page="../Vistas/contenido.jspx"/>
          </c:if>
           <jsp:forward page="../Vistas/verCuota.jspx"/>

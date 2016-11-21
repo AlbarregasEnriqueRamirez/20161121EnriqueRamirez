@@ -17,9 +17,9 @@
     <head></head>
     <body>
          <jsp:useBean id="contenidoB" scope="request" class="es.albarregas.beans.ContenidoBean"/>
-         <jsp:setProperty name ="edificioB" property="*"/>
+         <jsp:setProperty name ="contenidoB" property="*"/>
       
-          <jsp:forward page="../Vistas/VerCuota.jspx"/>
+          <jsp:forward page="../Vistas/verCuota.jspx"/>
           
     </body>
 </jsp:root>

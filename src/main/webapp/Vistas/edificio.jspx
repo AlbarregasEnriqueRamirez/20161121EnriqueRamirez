@@ -55,7 +55,9 @@
              <td><input type="radio" name="tipoConstruccion" value="Hormigón"/></td><td>Hormigón</td>
          </tr>         
      </table><br/>
+      <c:set var="tipoConstruccion" scope="request" value="Hormigón"/>
     
+     
      <label> Valor estimado en el mercado</label> 
      <select id="precioEstimado">
          <option value="25000"> Menor de 50.000</option>

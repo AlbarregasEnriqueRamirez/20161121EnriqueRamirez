@@ -17,7 +17,8 @@
         
     </head>
     <body>
-        <c:if test="${edificio}">
+        
+            <c:if test="${edificio}">
             
             Tipo de edificio <c:out value="${requestScope.edificioB.tipoEdificio}"/>
            Número de habitaciones <c:out value="${requestScope.edificioB.numHabitaciones}"/>
@@ -41,5 +42,6 @@
                 Franquicia No
                   </c:if>
         </c:if>
+                  <jsp:include page="../Modelos/calcularCuota.jspx"/>
     </body>
 </jsp:root>
